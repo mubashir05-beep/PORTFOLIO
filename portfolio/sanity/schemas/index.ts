@@ -1,6 +1,5 @@
-// import project from './project-schema'
-// import page from "./page-schema"
+import projects from './projects-schema';
 
-// const schemas = [project, page];
+const schemas = [projects];
 
-// export default schemas;
+export default schemas;
