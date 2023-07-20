@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { StateContextProvider } from "../../context/stateContext";
 import './globals.css'
+import Footer from "@/components/Footer";
 import {Poppins} from 'next/font/google'
 export const metadata = {
   title: "Mubashir | Portfolio",
@@ -15,10 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`mx-[3rem] my-[1rem]  ${inter.className}`}>
+      <body className={`px-[3rem] max-[500px]:px-[2rem] flex flex-col justify-between h-screen ${inter.className}`}>
         <StateContextProvider>
           <div >{children}</div>
         </StateContextProvider>
+        <Footer/>
       </body>
     </html>
   );
