@@ -1,7 +1,7 @@
 import { getProjects } from "../../sanity/sanity-utils";
 import Link from "next/link";
 import './globals.css'
-// Assuming the Project type is defined in "../../sanity/sanity-utils"
+
 
 export default function Home({}) {
   interface Ilinks {
@@ -18,26 +18,14 @@ export default function Home({}) {
 
   return (
     <>
-      <div className="flex justify-between ">
-        <div>Mubsah1r</div>
-        <ul>
-          {linkData.map((data) => (
-            <li key={data.id}>
-              <Link href={data.url}>{data.name}</Link>
-            </li>
-          ))}
-        </ul>
+  <div className="">
+  <div className="h-[30vh] flex flex-col  justify-end">
+         <h1 className="text-[80px] break-words font-[500]">Muhammad Mubashir Munir Khan.</h1>
+         <p className="text-[35px] font-[300]">Front-End Engineer</p> 
       </div>
+  </div>
+     
     </>
   );
 }
-// https://www.ahsankhan.me/
-// Fetch projects here and pass them as props to Home component
-export async function getStaticProps() {
-  const projects = await getProjects();
-  return {
-    props: {
-      projects,
-    },
-  };
-}
+
