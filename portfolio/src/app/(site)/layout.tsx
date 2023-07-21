@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { StateContextProvider } from "../../context/stateContext";
-import './globals.css'
+import { StateContextProvider } from "../../../context/stateContext";
+import '../globals.css'
 import Footer from "@/components/Footer";
 import {Poppins} from 'next/font/google'
 export const metadata = {

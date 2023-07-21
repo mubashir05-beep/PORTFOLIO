@@ -5,9 +5,9 @@ const Projects = () => {
   return (
     <>
       <Link href={"/projects"}>
-        <div className="gap-[18px] flex flex-col justify-evenly border border-black p-[2rem] max-[500px]:p-[1rem] rounded-xl">
+        <div className="gap-[18px] flex w-[400px] max-[1370px]:w-auto flex-col justify-evenly border border-black p-[2rem] max-[500px]:p-[1rem] rounded-xl">
           <h1 className="text-[35px] font-[300]">Projects</h1>
-          <p className="break-words text-[14px]">
+          <p className="break-words ttext-[15px]">
             Discover my expertise in React, Next.js, and Tailwind CSS. Explore
             more of my work experience and education details.
           </p>
