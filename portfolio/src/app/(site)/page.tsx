@@ -22,9 +22,7 @@ export default function Home({}) {
     <>
       <div className="flex items-center justify-center">
         <div className="flex flex-col justify-between h-auto">
-        <div className="flex justify-end w-full items-center pt-[0.5rem]">
-              <ThemeToggle />
-            </div>
+      
           <div className="pt-[40px] pb-[30px]   flex flex-col items-baseline  justify-end">
             <h1 className="text-[80px] max-[1070px]:text-[60px] max-[600px]:text-[40px] break-words font-[500] ">
               Muhammad Mubashir Munir Khan.
@@ -33,14 +31,14 @@ export default function Home({}) {
               Front-End Engineer
             </p>
           </div>
-          <div className=" h-auto w-auto flex max-[1370px]:flex-col gap-[2rem] ">
+          <div className=" h-auto w-auto flex max-[1495px]:flex-col gap-[2rem] ">
             <About />
-            <div className="flex max-[760px]:flex-col gap-[2rem] max-[500px]:gap-[1rem]  max-[1250px]:w-auto ">
-              <div className="flex  flex-col gap-[2rem] max-[500px]:gap-[1rem]">
+            <div className="flex max-[760px]:flex-col gap-[2rem] max-[500px]:gap-[1rem] w-full   max-[1250px]:w-auto ">
+              <div className="flex  flex-col gap-[2rem] w-full h-full max-[500px]:gap-[1rem]">
                 <Resume />
                 <Projects />
               </div>
-              <div className="flex flex-col gap-[2rem] max-[500px]:gap-[1rem]">
+              <div className="flex flex-col gap-[2rem] w-full h-full  max-[500px]:gap-[1rem]">
                 <Github />
                 <Contact />
               </div>

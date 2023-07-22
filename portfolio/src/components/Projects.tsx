@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <>
     <Link href={"/projects"}>
-    <div className="gap-[18px]  h-[199.5px] duration-300 transition hover:shadow-2xl  group flex flex-col justify-evenly border dark:border-white border-black p-[2rem] w-[400px] max-[1370px]:w-auto max-[500px]:p-[1rem] rounded-xl">
+    <div className="gap-[18px]  h-[199.5px] duration-300 transition hover:shadow-2xl  group flex flex-col justify-evenly border dark:border-white border-black p-[2rem] w-[400px] max-[1495px]:w-auto max-[500px]:p-[1rem] rounded-xl">
       <h1 className="text-[35px] font-[300] group-hover:underline  duration-300 transition underline-offset-4">Projects</h1>
       <div className="flex justify-between items-center">
       <p className="break-words text-[14px]">
