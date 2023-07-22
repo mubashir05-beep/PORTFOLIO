@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
     <Link href={"/contact"}>
-    <div className="gap-[18px]  h-[199.5px] flex flex-col justify-evenly border border-black p-[2rem] w-[400px] max-[1370px]:w-auto max-[500px]:p-[1rem] rounded-xl">
+    <div className="gap-[18px]  h-[199.5px] flex flex-col justify-evenly border dark:border-white border-black p-[2rem] w-[400px] max-[1370px]:w-auto max-[500px]:p-[1rem] rounded-xl">
       <h1 className="text-[35px] font-[300]">Contact</h1>
       <p className="break-words text-[14px]">
         Discover my expertise in React, Next.js, and Tailwind CSS. Explore
