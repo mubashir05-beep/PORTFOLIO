@@ -3,8 +3,8 @@ import "../app/globals.css";
 
 const About = () => {
   return (
-    <div className="gap-[18px] min-[1600px]:max-w-[650px]  max-[1370px]:w-auto dark:border-white  flex flex-col justify-between border border-black p-[2rem] max-[500px]:p-[1rem] rounded-xl">
-      <h1 className="text-[55px] font-[300]">About</h1>
+    <div className="gap-[18px] min-[1600px]:max-w-[650px] cursor-pointer group duration-300 transition hover:shadow-2xl  max-[1370px]:w-auto dark:border-white  flex flex-col justify-between border border-black p-[2rem] max-[500px]:p-[1rem] rounded-xl">
+      <h1 className="text-[55px] font-[300]  duration-300 transition group-hover:underline underline-offset-4">About</h1>
       <div className="flex flex-col text-[14px] gap-[12px]">
         <p className="break-words">
           Hello, and welcome to my portfolio! I am a skilled Front-End Engineer with a passion for creating
