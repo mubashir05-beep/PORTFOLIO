@@ -10,10 +10,10 @@ const Resume = () => {
       <h1 className="text-[35px] font-[300] group-hover:underline  duration-300 transition underline-offset-4">Resume</h1>
       <div className="flex justify-between items-center">
       <p className="break-words text-[14px]">Interested in my work experience and education?</p>
-      <div className="flex items-center justify-center ">
-              <div className="group-hover:bg-white w-[30px] h-[30px] absolute   duration-300 transition -z-20 bg-black"/>
-            <BsArrowUpRightCircleFill size={55} className="group-hover:text-black  duration-300 transition "/>
-         </div>
+      <div className="flex items-center justify-center">
+            <div className="dark:group-hover:bg-white w-[30px]  h-[30px] absolute duration-300 transition -z-20 dark:bg-black" />
+            <BsArrowUpRightCircleFill size={55} className="dark:group-hover:text-[#323138] group-hover:text-[#323138] duration-300 transition" />
+          </div>
     </div>
     </div>
   </Link>

@@ -12,10 +12,10 @@ const Projects = () => {
       <p className="break-words text-[14px]">
       Take a look at my projects!
       </p>
-      <div className="flex items-center justify-center ">
-              <div className="group-hover:bg-white w-[30px] h-[30px] absolute   duration-300 transition -z-20 bg-black"/>
-            <BsArrowUpRightCircleFill size={55} className="group-hover:text-black  duration-300 transition "/>
-         </div>
+      <div className="flex items-center justify-center">
+            <div className="dark:group-hover:bg-white w-[30px]  h-[30px] absolute duration-300 transition -z-20 dark:bg-black" />
+            <BsArrowUpRightCircleFill size={55} className="dark:group-hover:text-[#323138] group-hover:text-[#323138] duration-300 transition" />
+          </div>
     </div>
     </div>
   </Link>

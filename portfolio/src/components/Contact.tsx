@@ -11,8 +11,8 @@ const Contact = () => {
         <div className="flex justify-between items-center">
           <p className="break-words text-[14px]">Want to reach out? Contact me!</p>
           <div className="flex items-center justify-center">
-            <div className="group-hover:bg-white w-[30px] h-[30px] absolute duration-300 transition -z-20 bg-black" />
-            <BsArrowUpRightCircleFill size={55} className="dark:group-hover:text-[#101116] duration-300 transition" />
+            <div className="dark:group-hover:bg-white w-[30px]  h-[30px] absolute duration-300 transition -z-20 dark:bg-black" />
+            <BsArrowUpRightCircleFill size={55} className="dark:group-hover:text-[#323138] group-hover:text-[#323138] duration-300 transition" />
           </div>
         </div>
       </div>
