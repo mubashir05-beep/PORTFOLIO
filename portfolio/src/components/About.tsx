@@ -3,9 +3,9 @@ import "../app/globals.css";
 
 const About = () => {
   return (
-    <div className="gap-[18px] min-[1600px]:max-w-[650px]  max-[1370px]:w-auto  flex flex-col border border-black p-[2rem] max-[500px]:p-[1rem] rounded-xl">
+    <div className="gap-[18px] min-[1600px]:max-w-[650px]  max-[1370px]:w-auto   flex flex-col border border-black p-[2rem] max-[500px]:p-[1rem] rounded-xl">
       <h1 className="text-[35px] font-[300]">About</h1>
-      <div className="flex flex-col text-[15px] gap-[9px]">
+      <div className="flex flex-col text-[14px] gap-[9px]">
         <p className="break-words">
           Welcome to my portfolio! I am a skilled Front-End Engineer with a
           passion for crafting immersive web experiences using cutting-edge

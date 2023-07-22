@@ -4,7 +4,7 @@ import Resume from "@/components/Resume";
 import Projects from "@/components/Projects";
 import Github from "@/components/Github";
 import Contact from "@/components/Contact";
-
+import ThemeToggle from "@/components/ThemeToggle";
 export default function Home({}) {
   interface Ilinks {
     id: number;
@@ -22,7 +22,10 @@ export default function Home({}) {
     <>
       <div className="flex items-center justify-center">
         <div className="flex flex-col justify-between h-auto">
-          <div className="pt-[70px] pb-[50px]  max-[600px]:pt-[50px]  flex flex-col items-baseline  justify-end">
+        <div className="flex justify-end w-full items-center pt-[0.5rem]">
+              <ThemeToggle />
+            </div>
+          <div className="pt-[40px] pb-[30px]   flex flex-col items-baseline  justify-end">
             <h1 className="text-[80px] max-[1070px]:text-[60px] max-[600px]:text-[40px] break-words font-[500] ">
               Muhammad Mubashir Munir Khan.
             </h1>
