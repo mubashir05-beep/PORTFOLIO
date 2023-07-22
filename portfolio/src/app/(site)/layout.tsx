@@ -26,10 +26,9 @@ export default function RootLayout({
       >
         <StateContextProvider>
           <Providers>
-          <div className="flex flex-col items-center justify-center">
-            <div>{children}</div>
-
-            <Footer />
+            <div className="flex flex-col items-center justify-center">
+              <div>{children}</div>
+              <Footer />
             </div>
           </Providers>
         </StateContextProvider>
