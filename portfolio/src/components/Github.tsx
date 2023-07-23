@@ -12,8 +12,11 @@ const Github = () => {
           <h1 className="text-3xl flex py-3 justify-between items-center font-light relative group transition duration-300">
             Github
             <div className="flex items-center justify-center">
-            <div className="dark:group-hover:bg-white w-[34px]  h-[35.5px] rounded-full  absolute duration-300 transition -z-20 dark:bg-black" />
-            <BsGithub size={36} className="dark:group-hover:text-[#323138] group-hover:text-[#323138] duration-300 transition" />
+              <div className="dark:group-hover:bg-white w-[34px]  h-[35.5px] rounded-full  absolute duration-300 transition -z-20 dark:bg-black" />
+              <BsGithub
+                size={36}
+                className="dark:group-hover:text-[#323138] group-hover:text-[#323138] duration-300 transition"
+              />
             </div>
             <span className="block absolute bottom-0 left-0 w-full h-0.5 dark:bg-white bg-black transform-gpu origin-left group-hover:scale-x-100 scale-x-0 transition-all duration-300"></span>
           </h1>

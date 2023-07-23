@@ -77,11 +77,11 @@ const ResumeContent: FC = () => {
       <div className="w-[50vw] mx-auto flex items-center text-center justify-center h-0.5 bg-black dark:bg-white"/>
 
         
-      <div className="flex flex-col justify-between gap-6">
-      <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
+      <div className="flex flex-col group justify-between gap-6">
+      <h1 className="font-[500]  text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
           Education
         </h1>
-        <h1 className="text-3xl font-light relative group transition flex items-center justify-between duration-300">
+        <h1 className="text-3xl font-light relative  transition flex items-center justify-between duration-300">
           <div className="flex items-center w-full pb-2 justify-between">
             <div className="flex flex-col ">
             <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">PMAS-Arid Agriculture University (BIMS)</div>

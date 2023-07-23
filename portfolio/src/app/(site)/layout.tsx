@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import Providers from "./providers";
 import ThemeToggle from "@/components/ThemeToggle";
-
+import ProvidersLoading from './NextProgress'
 export const metadata = {
   title: "Mubashir | Portfolio",
   description: "Portfolio",
@@ -24,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <StateContextProvider>
           <Providers>
+            <ProvidersLoading>
             <div className="flex flex-col items-center w-full">
               <div className="flex justify-end w-full items-center pt-[0.5rem]">
                 <ThemeToggle />
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="flex flex-col items-center w-full flex-grow">{children}</div>
               <Footer />
             </div>
+            </ProvidersLoading>
           </Providers>
         </StateContextProvider>
       </body>
