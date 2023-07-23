@@ -1,21 +1,25 @@
 import React, { FC } from "react";
-import { FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineHome } from "react-icons/ai";
+ import { BiMessageAlt } from "react-icons/bi";
 
 import { MdOutlineContactPage } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
+import Link from "next/link";
 const PageHeader: FC = () => {
   return (
     <>
-      <div className="flex items-center transition duration-300  max-[700px]:flex-col gap-4 h-full">
-        <div className="flex h-full hover:shadow-2xl  transition duration-300  cursor-pointer flex-col p-[2rem] bg-black dark:bg-[#323138] rounded-lg gap-5">
+     <div className="flex items-center max-[755px]:flex-col max-[1200px]:flex-row w-full transition duration-300 flex-col gap-4">
+        <div className="flex break-words  hover:shadow-2xl w-full max-[1200px]:h-full transition duration-300  cursor-pointer flex-col p-8 bg-black dark:bg-[#323138] rounded-lg gap-5">
           <div className="flex flex-col gap-2">
-            <h1 className="font-[400] text-white text-[20px]">
+            <h1 className="font-[400] justify-evenly break-words max-[480px]:text-[18px] text-white text-[20px]">
               Muhammad Mubashir Munir Khan
             </h1>
             <p className="text-[14px] text-gray-300">Front-End Engineer</p>
           </div>
-          <p className="text-gray-300">contact.muhammadmubashir@gmail.com</p>
-          <p className="flex items-center gap-1 text-gray-300">
+          <p className="text-gray-300 max-[480px]:text-[14px] break-words">
+            contact.muhammadmubashir@gmail.com
+          </p>
+          <p className="flex items-center gap-1 max-[480px]:text-[14px] text-gray-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -31,15 +35,27 @@ const PageHeader: FC = () => {
             Islamabad | Pakistan 🇵🇰
           </p>
         </div>
-        <div className="flex h-full hover:shadow-2xl  transition duration-300  flex-col p-[2rem] items-center justify-evenly max-w-[400px] bg-black dark:bg-[#323138]  rounded-lg gap-5">
-          <a href="https://github.com/mubashir05-beep" target="_blank" className="flex w-[130px] items-center gap-4 cursor-pointer px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  ">
+        <div className="flex  w-full hover:shadow-2xl  transition duration-300 max-[1200px]:h-full flex-col p-8 items-center justify-evenly  bg-black dark:bg-[#323138]  rounded-lg gap-5">
+        <Link href={'/'} className="flex items-center cursor-pointer gap-4 px-4 py-2 border  w-full justify-center border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  ">
+            <AiOutlineHome /> Home
+          </Link>
+          <a
+            href="https://github.com/mubashir05-beep"
+            target="_blank"
+            className="flex w-full justify-center items-center gap-4 cursor-pointer px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  "
+          >
             <FiGithub /> GitHub
           </a>
-          <a className="flex items-center cursor-pointer gap-4 px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  ">
-            <FaLinkedinIn  /> LinkedIn
-          </a>
-          <a className="flex items-center cursor-pointer gap-4 px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300  hover:shadow-2xl ">
-            <MdOutlineContactPage size={18}/> Resume
+          <Link href={'/contact'} className="flex items-center cursor-pointer gap-4 px-4 py-2 border  w-full justify-center border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  ">
+            <BiMessageAlt /> Contact
+          </Link>
+         
+          <a
+            href="https://publuu.com/flip-book/195325/474153"
+            target="_blank"
+            className="flex  w-full justify-center items-center cursor-pointer gap-4 px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300  hover:shadow-2xl "
+          >
+            <MdOutlineContactPage size={18} /> Resume
           </a>
         </div>
       </div>

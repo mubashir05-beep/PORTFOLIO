@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { StateContextProvider } from "../../../context/stateContext";
 import "../globals.css";
 import Footer from "@/components/Footer";
@@ -31,9 +31,9 @@ export default function RootLayout({
               <div className="flex justify-end w-full items-center pt-[0.5rem]">
                 <ThemeToggle />
               </div>
-              <div className="flex flex-col items-center h-full">{children}</div>
-                  <Footer />
+              <div className="flex flex-col items-center w-full h-full">{children}</div>
             </div>
+           
           </Providers>
         </StateContextProvider>
       </body>
