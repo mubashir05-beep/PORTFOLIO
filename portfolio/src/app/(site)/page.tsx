@@ -21,9 +21,9 @@ export default function Home({}) {
   return (
     <>
       <div className="flex items-center justify-center">
-        <div className="flex flex-col justify-between h-auto">
+        <div className="flex flex-col gap-[30px] justify-between h-auto">
       
-          <div className="pt-[40px] pb-[30px]   flex flex-col items-baseline  justify-end">
+          <div className="  flex flex-col items-baseline  justify-end">
             <h1 className="text-[80px] max-[1070px]:text-[60px] max-[600px]:text-[40px] break-words font-[500] ">
               Muhammad Mubashir Munir Khan.
             </h1>

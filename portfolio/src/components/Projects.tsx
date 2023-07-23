@@ -7,7 +7,10 @@ const Projects = () => {
     <>
     <Link href={"/projects"}>
     <div className="gap-[18px]  h-[199.5px] duration-300 transition hover:shadow-2xl  group flex flex-col justify-evenly border dark:border-white border-black p-[2rem] w-[400px] max-[1495px]:w-auto max-[500px]:p-[1rem] rounded-xl">
-      <h1 className="text-[35px] font-[300] group-hover:underline  duration-300 transition underline-offset-4">Projects</h1>
+    <h1 className="text-3xl font-light relative group transition duration-300">
+  Projects
+  <span className="block absolute bottom-0 left-0 w-full h-0.5 dark:bg-white bg-black transform-gpu origin-left group-hover:scale-x-100 scale-x-0 transition-all duration-300"></span>
+</h1>
       <div className="flex justify-between items-center">
       <p className="break-words text-[14px]">
       Take a look at my projects!
