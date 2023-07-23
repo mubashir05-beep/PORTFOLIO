@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import Providers from "./providers";
 import ThemeToggle from "@/components/ThemeToggle";
+
 export const metadata = {
   title: "Mubashir | Portfolio",
 
@@ -26,16 +27,13 @@ export default function RootLayout({
       >
         <StateContextProvider>
           <Providers>
-
-            <div className="flex flex-col items-center h-screen w-max  justify-between">
-            <div className="flex justify-end w-full items-center pt-[0.5rem]">
-              <ThemeToggle />
-            </div>
-              <div className="flex flex-col items-center justify-end">{children}
-              <Footer />
+            <div className="flex flex-col items-center h-screen w-full ">
+              <div className="flex justify-end w-full items-center pt-[0.5rem]">
+                <ThemeToggle />
               </div>
+              <div className="flex flex-col items-center h-full">{children}</div>
+                  <Footer />
             </div>
-           
           </Providers>
         </StateContextProvider>
       </body>
