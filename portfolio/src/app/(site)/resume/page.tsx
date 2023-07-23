@@ -6,10 +6,10 @@ const Page = () => {
   return (
     <>
       <div className="flex w-full justify-center gap-12 max-[1200px]:flex-col">
-        <div className="min-[1200px]:sticky top-6 flex min-[1200px]:h-[600px] ">
+        <div className="min-[1200px]:sticky top-6 flex min-[1200px]:h-[600px] min-[1200px]:py-2">
           <Page_Header />
         </div>
-        <div className="h-[10000px]">
+        <div >
           <ResumeContent />
         </div>
       </div>
