@@ -8,14 +8,14 @@ const ResumeContent: FC = () => {
           Experience
         </h1>
         <h1 className="text-3xl font-light relative group transition flex items-center justify-between duration-300">
-          <div className="flex items-center w-full pb-2 justify-between">
+          <div className="flex items-center max-[455px]:flex-col max-[455px]:items-start  w-full pb-2 justify-between">
             <div className="flex flex-col ">
             <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">FreeLancing</div>
-            <div className=" text-[14px] font-[400]  dark:text-gray-300">
+            <div className=" text-[14px] font-[400] max-[455px]:[13px] dark:text-gray-300">
               Front-End Developer
             </div>
             </div>
-            <div className=" text-[18px] font-[400] max-[550px]:text-[14px] dark:text-gray-300">
+            <div className=" text-[18px] font-[400] max-[550px]:text-[14px]  max-[455px]:[13px] dark:text-gray-300">
               SEPT 2022-Present
             </div>
           </div>
@@ -82,7 +82,7 @@ const ResumeContent: FC = () => {
           Education
         </h1>
         <h1 className="text-3xl font-light relative  transition flex items-center justify-between duration-300">
-          <div className="flex items-center w-full pb-2 justify-between">
+          <div className="flex items-center w-full pb-2 max-[835px]:flex-col max-[835px]:items-start justify-between">
             <div className="flex flex-col ">
             <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">PMAS-Arid Agriculture University (BIMS)</div>
             <div className=" text-[14px] font-[400]  dark:text-gray-300">

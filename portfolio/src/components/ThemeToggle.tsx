@@ -16,11 +16,10 @@ const ThemeToggle = () => {
 
   return (
     <>
-      <NextNProgress color="#000000" options={{ showSpinner: false }} />
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className=" w-auto rounded-lg p-2 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-700"
+        className=" w-auto rounded-lg p-2 my-2 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-700"
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         {resolvedTheme === "dark" ? (
