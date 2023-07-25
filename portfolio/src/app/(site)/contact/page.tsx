@@ -31,46 +31,70 @@ const PageComponent: React.FC = () => {
   return (
     <div className='h-[80vh] flex items-center justify-center'>
       <form
-        className='w-full max-w-sm p-6 border border-black dark:border-white rounded shadow-md'
+        className='w-full max-w-sm p-6 rounded shadow-md'
         onSubmit={handleSubmit}
       >
-        <div className='mb-4'>
-      
+        <div className='mb-4 relative'>
           <input
             type='text'
             name='name'
             required
             value={name}
-            className='w-full p-2 border  border-black dark:border-white rounded'
+            className={`w-full p-2 rounded appearance-none focus:outline-none focus:ring-0 focus:border-black ${
+              name ? 'border-b-2' : ''
+            }`}
             onChange={handleChange}
-            placeholder='Name'
           />
+          <label
+            htmlFor='name'
+            className={`absolute duration-300 top-2 left-2 transform origin-0 text-gray-500 ${
+              name ? 'text-black text-xs' : 'text-base'
+            } ${name ? '-translate-y-6' : 'translate-y-0'}`}
+          >
+            Name
+          </label>
           <div className='text-red text-sm'>{name}</div>
         </div>
-        <div className='mb-4'>
-          
+        <div className='mb-4 relative'>
           <input
             type='email'
             name='mail'
             required
             value={mail}
-            className='w-full p-2 border  border-black dark:border-white rounded'
+            className={`w-full p-2 rounded appearance-none focus:outline-none focus:ring-0 focus:border-black ${
+              mail ? 'border-b-2' : ''
+            }`}
             onChange={handleChange}
-            placeholder='Mail'
           />
+          <label
+            htmlFor='mail'
+            className={`absolute duration-300 top-2 left-2 transform origin-0 text-gray-500 ${
+              mail ? 'text-black text-xs' : 'text-base'
+            } ${mail ? '-translate-y-6' : 'translate-y-0'}`}
+          >
+            Mail
+          </label>
           <div className='text-red text-sm'>{mail}</div>
         </div>
-        <div className='mb-4'>
-        
+        <div className='mb-4 relative'>
           <input
             type='text'
             required
             name='message'
             value={message}
-            className='w-full p-2 border  border-black dark:border-white rounded'
+            className={`w-full p-2 rounded appearance-none focus:outline-none focus:ring-0 focus:border-black ${
+              message ? 'border-b-2' : ''
+            }`}
             onChange={handleChange}
-            placeholder='Message'
           />
+          <label
+            htmlFor='message'
+            className={`absolute duration-300 top-2 left-2 transform origin-0 text-gray-500 ${
+              message ? 'text-black text-xs' : 'text-base'
+            } ${message ? '-translate-y-6' : 'translate-y-0'}`}
+          >
+            Message
+          </label>
           <div className='text-red text-sm'>{message}</div>
         </div>
         <div className='text-center'>
