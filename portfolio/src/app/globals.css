@@ -16,13 +16,15 @@ textarea:not(:placeholder-shown) ~ label,
 select:focus ~ label,
 select:not([value=""]):valid ~ label {
   @apply transform;
-  @apply scale-75;
+  @apply text-[12px];
   @apply -translate-y-6;
 }
 
 input:focus ~ label,
+textarea:focus ~ label,
 select:focus ~ label {
+  @apply dark:text-white;
   @apply text-black;
-  @apply left-2;
+  @apply left-0;
   @apply -translate-y-6;
 }
