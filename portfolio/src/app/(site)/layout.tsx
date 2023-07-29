@@ -10,7 +10,7 @@ export const metadata = {
   title: "Mubashir | Portfolio",
   description: "Portfolio",
 };
-
+import { Toaster } from "react-hot-toast";
 const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "100", "200", "300", "500", "600", "700", "800", "900"],
@@ -25,13 +25,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StateContextProvider>
           <Providers>
             <ProvidersLoading>
-            <div className="flex flex-col items-center w-full">
+              <Toaster/>
+            <div className="flex flex-col items-center w-full ">
               <div className="flex justify-end w-full items-center pt-[0.5rem]">
                 <ThemeToggle />
               </div>
               <div className="flex flex-col items-center w-full flex-grow">{children}</div>
-              <Footer />
             </div>
+            <Footer />
             </ProvidersLoading>
           </Providers>
         </StateContextProvider>
