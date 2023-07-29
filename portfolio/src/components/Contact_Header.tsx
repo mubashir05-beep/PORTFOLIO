@@ -5,17 +5,20 @@ interface ContactHeaderProps {
 }
 
 const Contact_Header: React.FC<ContactHeaderProps> = ({ email }) => {
-    return (
-      <div className="contact-header">
-        <h1 className="contact-header-title">Get in Touch</h1>
-        <p className="contact-header-description">
-          I'd love to hear your ideas and thoughts!
-        </p>
-        <p className="contact-header-email">
-          Alternatively, you can email me at:{" "}
-          <a href={`mailto:${email}`}>{email}</a>
-        </p>
-      </div>
-    );
-  };
-  export default Contact_Header;
+  return (
+    <div className="contact-header flex flex-col gap-2">
+      <h1 className="text-3xl font-semibold">Get in Touch</h1>
+      <p className="dark:text-gray-300 text-black">
+        I&#39;d love to hear your ideas and thoughts!
+      </p>
+      <p className="dark:text-gray-300 text-black">
+        Alternatively, you can email me at:
+        <a href={`mailto:${email}`} className=" hover:underline">
+          {email}
+        </a>
+      </p>
+    </div>
+  );
+};
+
+export default Contact_Header;
