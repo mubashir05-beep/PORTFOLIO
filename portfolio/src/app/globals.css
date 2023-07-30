@@ -28,3 +28,17 @@ select:focus ~ label {
   @apply left-0;
   @apply -translate-y-6;
 }
+.logo {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+ 
+}
+.logo:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 3px;
+
+}

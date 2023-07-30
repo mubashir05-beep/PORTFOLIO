@@ -1,12 +1,9 @@
 import React from "react";
 import Form from "@/components/Form";
 import Contact_Header from "@/components/Contact_Header";
-import { AiOutlineHome } from "react-icons/ai";
-import { BiMessageAlt } from "react-icons/bi";
-import { MdOutlineContactPage } from "react-icons/md";
-import { FiGithub } from "react-icons/fi";
-import Link from "next/link";
 
+import Link from "next/link";
+import '../../globals.css'
 const Page: React.FC = () => {
   return (
     <div className="h-[80vh] w-full flex flex-col items-center justify-center gap-[2rem]">
@@ -15,12 +12,13 @@ const Page: React.FC = () => {
       ">
         <Link
           href={"/"}
-          className=""
+          className="font-[400] pointer  logo"
         >
           Mubashir
         </Link>
+
       </div>
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between max-[1140px]:flex-col  max-[1140px]:items-center   max-[1140px]:gap-[2rem] w-full">
         <Contact_Header email="contact.muhammadmubashir@gmail.com" />
         <div className="flex flex-col gap-[3rem]">
           <Form />
