@@ -12,9 +12,9 @@ const Contact_Header: React.FC<ContactHeaderProps> = ({ email }) => {
         I&#39;d love to hear your ideas and thoughts!
       </p>
       <p className="dark:text-gray-300 text-black">
-        Alternatively, you can email me at:
-        <a href={`mailto:${email}`} className=" hover:underline">
-          {email}
+        Alternatively, you can email me at : 
+         <a href={`mailto:${email}`} className=" hover:underline">
+          {" "+email}
         </a>
       </p>
     </div>
