@@ -20,18 +20,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body
-        className={`px-[3rem] max-[500px]:px-[2rem] flex flex-col items-center justify-center min-h-screen ${inter.className}`}
+        className={`px-[3rem] max-[500px]:px-[2rem] flex flex-col items-center justify-between h-full min-h-screen ${inter.className}`}
       >
         <StateContextProvider>
           <Providers>
             <ProvidersLoading>
               <Toaster/>
-            <div className="flex flex-col items-center w-full ">
-              <div className="flex justify-end w-full items-center pt-[0.5rem]">
+            
+           
+            <div className="flex justify-end w-full items-center pt-[0.5rem]">
                 <ThemeToggle />
               </div>
-              <div className="flex flex-col items-center w-full flex-grow">{children}</div>
-            </div>
+              <div className="flex flex-col items-center justify-center w-full flex-grow">{children}</div>
+            
             <Footer />
             </ProvidersLoading>
           </Providers>
