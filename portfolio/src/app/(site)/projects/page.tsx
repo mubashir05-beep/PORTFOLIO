@@ -3,6 +3,7 @@ import React from "react";
 
 
 import Project_Showcase from "@/components/Project_Showcase";
+import AllProjects from "@/components/AllProjects";
 
 const page: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ const page: React.FC = () => {
         <div className="text-[30px] underline  underline-offset-4 max-[550px]:text-[25px]">
           All Projects
         </div>
-        <Project_Showcase/>
+        <AllProjects/>
         </div>
       </div>
     </div>

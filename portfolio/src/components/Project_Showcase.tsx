@@ -75,7 +75,7 @@ const Project_Showcase: React.FC = () => {
       <Image
         src={urlFor(project.thumbnail_image).url()}
         alt={project.project_name}
-        width={100} // Set an appropriate width for your image
+        width={700} // Set an appropriate width for your image
         height={100} // Set an appropriate height for your image
         className="object-cover rounded-lg border dark:border-white border-gray-600 w-full flex-1 "
       />
