@@ -4,9 +4,14 @@ const ResumeContent: FC = () => {
   return (
     <div className="flex flex-[0.75] gap-8   justify-between flex-col">
       <div className="flex flex-col gap-6  group ">
+      <div className="flex flex-col gap-[0.5rem]">
         <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
           Experience
         </h1>
+        <div className="text-[15px]">
+       Having 1 year of Front-End Development experience with React, Next.js, TypeScript, Sanity, and Tailwind CSS.
+          </div>
+        </div>
         <h1 className="text-3xl font-light relative group transition flex items-center justify-between duration-300">
           <div className="flex items-center max-[455px]:flex-col max-[455px]:items-start  w-full pb-2 justify-between">
             <div className="flex flex-col ">

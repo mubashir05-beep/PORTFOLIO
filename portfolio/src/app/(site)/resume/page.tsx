@@ -2,7 +2,7 @@ import Page_Header from "@/components/Page_Header";
 import ResumeContent from "@/components/ResumeContent";
 import React from "react";
 
-const Page = () => {
+const Page:React.FC = () => {
   return (
     <>
       <div className="flex w-full justify-center gap-12 max-[1200px]:flex-col">
