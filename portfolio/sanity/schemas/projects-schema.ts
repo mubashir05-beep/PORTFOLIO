@@ -10,7 +10,8 @@ export default{
         "options": {
           "hotspot": true
         }
-      },      
+      },  
+  
       {
         "name": "project_name",
         "title": "Project_Name",
