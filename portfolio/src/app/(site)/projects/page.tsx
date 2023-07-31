@@ -22,7 +22,7 @@ const page: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col gap-4">
-        <div className="text-[30px] underline underline-offset-4 max-[550px]:text-[40px]">
+        <div className="text-[30px] underline  underline-offset-4 max-[550px]:text-[25px]">
           Featured Projects
         </div>
         <Project_Showcase/>
