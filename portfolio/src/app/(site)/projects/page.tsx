@@ -1,4 +1,4 @@
-import PageHeader from "@/components/Page_Header";
+import Page_Header from "@/components/Page_Header";
 import React from "react";
 
 
@@ -7,9 +7,9 @@ import Project_Showcase from "@/components/Project_Showcase";
 const page: React.FC = () => {
   return (
     <div className="flex justify-between gap-[2rem] max-[1200px]:flex-col h-full w-full">
-      <div className="flex-[0.3] h-full">
-        <PageHeader />
-      </div>
+        <div className="min-[1200px]:sticky top-6 flex min-[1200px]:h-[600px] min-[1200px]:py-2">
+          <Page_Header />
+        </div>
       
       <div className="flex flex-col gap-[1rem] flex-1">
         <div className="flex flex-col gap-[0.5rem]">
