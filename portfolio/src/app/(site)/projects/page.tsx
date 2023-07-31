@@ -27,7 +27,12 @@ const page: React.FC = () => {
         </div>
         <Project_Showcase/>
         </div>
-       
+        <div className="flex flex-col gap-4">
+        <div className="text-[30px] underline  underline-offset-4 max-[550px]:text-[25px]">
+          All Projects
+        </div>
+        <Project_Showcase/>
+        </div>
       </div>
     </div>
   );
