@@ -37,6 +37,18 @@ export default{
         ]
       },
       {
+        "name": "category",
+        "title": "Category",
+        "type": "array",
+        "of": [
+          {
+            "type": "string",
+            "title": "stack",
+            "description": "Enter a stack"
+          }
+        ]
+      },
+      {
         "name": "live_link",
         "title": "Live_Link",
         "type": "string"
