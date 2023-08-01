@@ -28,7 +28,7 @@ const AllProjects: React.FC = () => {
   const [categoriesProjects, setCategoriesProjects] = useState<Category[] | null>(
     null
   );
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<string>('ALL'); // Set the default state to 'ALL'
   const [showAllProjects, setShowAllProjects] = useState<boolean>(false);
   const [projects, setProjects] = useState<Projects[]>([]);
   useEffect(() => {
@@ -61,12 +61,23 @@ const AllProjects: React.FC = () => {
   const filteredProjects = showAllProjects
     ? projects // Show all projects when "ALL" is selected
     : projects.filter((project) =>
-        selectedOption ? project.category.includes(selectedOption) : true
-      );
+      selectedOption === 'ALL' ? true : project.category.includes(selectedOption)
+    );
 
   return (
     <div>
       <div className="flex flex-wrap gap-2">
+        {/* Render the "ALL" category button */}
+        <div
+          className={`bg-gray-100 dark:bg-gray-800 cursor-pointer px-2 py-1 rounded ${
+            selectedOption === "ALL"
+              ? "bg-black text-white dark:bg-gray-600"
+              : "text-gray-800 dark:text-gray-200"
+          }`}
+          onClick={() => handleSelection("ALL")}
+        >
+          ALL
+        </div>
         {categoriesProjects &&
           categoriesProjects.map((tech) =>
             tech.tech_stack.map((stack) => (
