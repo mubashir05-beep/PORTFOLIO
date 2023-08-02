@@ -49,7 +49,7 @@ const Project_Showcase: React.FC = () => {
           <p className="text-base font-semibold">Tech Stack :</p>
           <span className="flex gap-1  flex-wrap text-sm">
             {project.project_stack.map((tech: string) => (
-              <div key={tech} className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+              <div key={tech} className={`bg-black text-white dark:bg-gray-800  px-2 py-1 rounded`}>
                 {tech}
               </div>
             ))}

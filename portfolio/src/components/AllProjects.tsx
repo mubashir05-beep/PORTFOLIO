@@ -100,7 +100,7 @@ const AllProjects: React.FC = () => {
             ))
           )}
       </div>
-      <div className="grid grid-cols-2 mt-8 gap-4">
+      <div className="grid grid-cols-2 max-[850px]:grid-cols-1 mt-8 gap-4">
         {filteredProjects.length === 0 ? (
           <p className="col-span-2">No projects found for the selected category.</p>
         ) : (
@@ -116,7 +116,7 @@ const AllProjects: React.FC = () => {
                 />
               )}
               <h2 className="text-xl font-semibold mt-4">{project.project_name}</h2>
-              <p className="mt-2">{truncateDescription(project.project_description,25)}</p>
+              <div className="text-sm  text-gray-800 dark:text-gray-300">{truncateDescription(project.project_description,25)}</div>
               <p className="mt-2 flex gap-1">
                 {project.project_stack.map((stack) => (
                   <span className={`bg-black text-white dark:bg-gray-800  px-2 py-1 rounded`} key={stack}>
