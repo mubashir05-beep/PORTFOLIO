@@ -10,7 +10,6 @@ export default{
         "options": {
           "hotspot": true
         },
-        "validation": Rule => Rule.required(),
         "accept": "image/gif" // Set the accept option to "image/gif" to allow GIFs
       },
   
