@@ -49,7 +49,7 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
               <h2 className="text-[2rem] text-white  font-[500]">{project.project_name}</h2>
               <h2 className="text-[14px] text-gray-300">{project.project_status}</h2>
               {project.project_caution &&
-                <div className='text-red-500 pt-[6px] text-[13px]'>{project.project_caution}</div>
+                <div className='text-red-500 pt-[12px] text-[13px]'>{project.project_caution}</div>
               }
             </div>
 
@@ -70,9 +70,7 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
                 </ul></div>
               <div className="flex justify-between items-center pt-4">
                 <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="dark:bg-white bg-black transition duration-300  dark:text-black text-white px-4 py-2 rounded-md dark:hover:bg-gray-400">Live Demo</a>
-
                 <a href={project.repo_link} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 rounded-md dark:hover:bg-gray-800">GitHub Repo</a>
-
               </div>
             </div>
           </div>
