@@ -1,10 +1,10 @@
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { getProjects } from "../../sanity/sanity-utils";
 import Image from "next/image";
 import { urlFor } from "../../sanity/config/client-config";
-import Link from "next/link";
+
 import { BsArrowUpRightCircleFill } from 'react-icons/bs'
+import Link from "next/link";
 interface projectsTypes {
   _id: string;
   thumbnail_image: {
@@ -68,10 +68,12 @@ const Project_Showcase: React.FC = async () => {
                   Repo
                 </a>
               </div>
-
+<Link href={`/projects/${project.slug.current}`}>
               <div className="dark:group-hover:bg-white w-[30px]  h-[30px] absolute duration-300 transition -z-20 dark:bg-black" />
               <BsArrowUpRightCircleFill size={55} className="dark:hover:text-[#323138] cursor-pointer hover:text-[#323138] duration-300 transition" />
-            </div>
+              </Link>
+           </div>
+         
           </div>
           <Image
             src={urlFor(project.thumbnail_image).url()}
