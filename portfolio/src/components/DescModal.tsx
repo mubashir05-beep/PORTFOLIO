@@ -42,12 +42,10 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
   return (
     <>
       {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-        <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
-        <div className="dark:bg-[#323138] bg-white rounded-lg shadow-lg max-w-md p-6 m-1 max-[370px]:p-3  flex flex-col gap-[1rem]">
-          
+      <div className="fixed inset-0 z-50 flex items-center justify-center ">
 
-          
+        <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
+        <div className="dark:bg-[#323138] bg-white rounded-lg inset-0 max-[600px]:w-full max-[600px]:rounded-none max-[600px]:absolute overflow-auto shadow-lg min-[599px]:max-w-md p-6  flex  flex-col gap-[1rem]">
             <div className='flex flex-col'>
             <div className='flex  items-center justify-between'>
               <h2 className="text-[2rem] dark:text-white  font-[500]">{project.project_name}</h2>
