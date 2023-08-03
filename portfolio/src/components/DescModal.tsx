@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 interface Projects {
@@ -21,8 +21,18 @@ interface Projects {
 const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
+  useEffect(() => {
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = modalOpen ? 'hidden' : 'unset';
+    };
+    handleBodyOverflow();
+
+    return () => {
+      document.body.style.overflow = 'unset'; // Restore body overflow on component unmount
+    };
+  }, [modalOpen]);
   const handleModalToggle = () => {
-    setModalOpen(!modalOpen);
+    setModalOpen((prevModalOpen) => !prevModalOpen);
   };
 
   return (
@@ -30,19 +40,23 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md">
-            <h2 className="text-2xl font-bold mb-4">{project.project_name}</h2>
-            {/* <img src={project.thumbnail_image.asset.url} alt={project.project_name} className="mb-4 rounded-lg" /> */}
-            <p className="text-gray-700 mb-4">{project.project_description}</p>
-            <div>Tech Stack:</div>
-            <ul className="mb-4">
-              {project.project_stack.map((tech, index) => (
-                <li key={index} className="text-blue-600">{tech}</li>
-              ))}
-            </ul>
-            <div className="flex justify-between">
-              <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Live Demo</a>
-              <a href={project.repo_link} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">GitHub Repo</a>
+          <div className="dark:bg-[#323138]  rounded-lg shadow-lg max-w-md p-6 flex flex-col gap-[2rem]">
+            <h2 className="text-[2rem] font-[500]">{project.project_name}</h2>
+            <div className='flex flex-col gap-[1rem]'>
+              <p className="">{project.project_description}</p>
+              <div className='flex flex-col gap-2'>
+                <div className='text-white text-[2rem]'>Tech Stack:</div>
+                <ul className="flex gap-1 flex-wrap">
+                  {project.project_stack.map((tech, index) => (
+                    <li key={index} className={`bg-black text-white dark:bg-gray-800  px-2 py-1 rounded`}>{tech}</li>
+                  ))}
+                </ul></div>
+              <div className="flex justify-between items-center pt-4">
+                <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 rounded-md dark:hover:bg-gray-800">Live Demo</a>
+
+                <a href={project.repo_link} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 rounded-md dark:hover:bg-gray-800">GitHub Repo</a>
+
+              </div>
             </div>
           </div>
         </div>
