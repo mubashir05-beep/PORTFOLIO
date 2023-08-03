@@ -16,35 +16,47 @@ export const categories=async()=>{
   const projects = await client.fetch(query);
   return projects ;
 }
-interface Project {
-  _id: string;
-  thumbnail_image: {
-    asset: {
-      url: string | any;
-      // Add other properties from the 'thumbnail_image' field here if needed
-    };
-    // Add other properties from the 'thumbnail_image' field here if needed
-  };
-  project_name: string;
-  slug: string;
-  project_description: string;
-  project_stack: string[];
-  live_link: string;
-  repo_link: string;
-}
+// interface Project {
+//   _id: string;
+//   thumbnail_image: {
+//     asset: {
+//       url: string | any;
+//       // Add other properties from the 'thumbnail_image' field here if needed
+//     };
+//     // Add other properties from the 'thumbnail_image' field here if needed
+//   };
+//   project_name: string;
+//   slug: string;
+//   project_description: string;
+//   project_stack: string[];
+//   live_link: string;
+//   repo_link: string;
+// }
+// export async function getProject() {
+//   const query = `*[_type == "product"]{
+//     slug {
+//       current
+//     }
+//   }`;
+//   const products: Project[] = await client.fetch(query);
+//   const paths = products.map((product) => ({
+//     params: {
+//       slug: product.slug,
+//     },
+//   }));
+//   return {
+//     paths,
+//     fallback: "blocking",
+//   };
+// }
 
-export async function getProject(slug: string): Promise<Project> {
-  return client.fetch(
-    groq`*[_type == "project" && slug.current == $slug][0]{
-      _id,
-      _createdAt,
-      name,
-      "slug": slug.current,
-      "image": image.asset->url,
-      url,
-      content
-    }`,
-    { slug }
-  );
-}
+// export async function getProjectProps({ params: { slug } }) {
+//   const query = `*[_type == "product" && slug.current == "${slug}"][0]`;
+//   const product: Project = await client.fetch(query);
 
+//   return {
+//     props: {
+//       project: product,
+//     },
+//   };
+// }

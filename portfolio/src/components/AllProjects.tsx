@@ -1,9 +1,7 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { categories, allProjects } from "../../sanity/sanity-utils";
-import { urlFor } from "../../sanity/config/client-config";
-import Image from "next/image";
-import { BsArrowUpRightCircleFill } from 'react-icons/bs'
+
 import ProjectsData from "./ProjectsData";
 
 interface Category {
@@ -11,7 +9,7 @@ interface Category {
 }
 interface Projects {
   _id: string;
-  thumbnail_image?: {
+  thumbnail_image: {
       asset: {
           url: string | any;
       };

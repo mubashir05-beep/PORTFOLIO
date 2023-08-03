@@ -3,6 +3,8 @@ import { urlFor } from "../../sanity/config/client-config";
 import Image from "next/image";
 import { BsArrowUpRightCircleFill } from 'react-icons/bs'
 import React, { useState } from "react";
+import DescModal from "./DescModal";
+
 
 interface Category {
   tech_stack: string[];
@@ -10,7 +12,7 @@ interface Category {
 
 interface Projects {
   _id: string;
-  thumbnail_image?: {
+  thumbnail_image: {
     asset: {
       url: string | any;
     };
@@ -112,8 +114,7 @@ const ProjectsData: React.FC<{ projectsData: Projects[], fetchedCategories: Cate
                   </a>
                 </div>
 
-                <div className="dark:group-hover:bg-white w-[30px]  h-[30px] absolute duration-300 transition -z-20 dark:bg-black" />
-                <BsArrowUpRightCircleFill size={55} className="dark:hover:text-[#323138] cursor-pointer hover:text-[#323138] duration-300 transition" />
+             <DescModal project={project}/>
               </div>
             </div>
           ))
