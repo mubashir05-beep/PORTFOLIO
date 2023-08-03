@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
-
+import { RxCross1 } from "react-icons/rx";
 interface Projects {
   _id: string;
   thumbnail_image: {
@@ -43,15 +43,22 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
     <>
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
-          <div className="dark:bg-[#323138] bg-white  rounded-lg shadow-lg max-w-md p-6 flex flex-col gap-[1.5rem]">
-            <div>
+        <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
+        <div className="dark:bg-[#323138] bg-white rounded-lg shadow-lg max-w-md p-6 m-1 max-[370px]:p-3  flex flex-col gap-[1rem]">
+          
+
+          
+            <div className='flex flex-col'>
+            <div className='flex  items-center justify-between'>
               <h2 className="text-[2rem] dark:text-white  font-[500]">{project.project_name}</h2>
+              <RxCross1 size={24} className='cursor-pointer' onClick={handleModalToggle}/>
+            </div>
               <h2 className="text-[14px] dark:text-gray-300">{project.project_status}</h2>
               {project.project_caution &&
                 <div className='text-red-500 pt-[6px] text-xs'>{project.project_caution}</div>
               }
             </div>
+           
             <div className='flex flex-col gap-[1rem]'>
               <p className="dark:text-gray-300 text-sm">{project.project_description}</p>
               <div className='flex flex-col gapz'>
