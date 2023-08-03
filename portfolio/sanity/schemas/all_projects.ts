@@ -18,6 +18,28 @@ export default{
         "type": "string"
       },
       {
+        "name": "project_status",
+        "title": "Project_Status",
+        "type": "string"
+      },
+      {
+        "name": "project_industry",
+        "title": "project_Industry",
+        "type": "string"
+      },
+      {
+        "name": "project_date",
+        "title": "project_Date",
+        "type": "string"
+      },
+      {
+        "name": "project_caution",
+        "title": "Project_Caution",
+        "type": "text", // Use the "text" type for a paragraph field
+        "rows": 4, // Optional: Specify the number of rows in the input field
+        "description": "Enter a description for the project" // Optional: Add a description for the field
+      },
+      {
         "name": "project_description",
         "title": "Project_Description",
         "type": "text", // Use the "text" type for a paragraph field

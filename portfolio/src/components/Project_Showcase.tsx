@@ -8,19 +8,23 @@ import Link from "next/link";
 import DescModal from "./DescModal";
 interface projectsTypes {
  
-    _id: string;
-    thumbnail_image: {
-        asset: {
-            url: string | any;
-        };
+  _id: string;
+  thumbnail_image: {
+    asset: {
+      url: string | any;
     };
-    project_name: string;
-    category: string[];
-    slug: string;
-    project_description: string;
-    project_stack: string[];
-    live_link: string;
-    repo_link: string;
+  };
+  project_name: string;
+  category: string[];
+  slug: string;
+  project_status:string,
+  project_industry:string,
+  project_description: string;
+  project_caution:string;
+  project_date:string;
+  project_stack: string[];
+  live_link: string;
+  repo_link: string;
   
 }
 
@@ -36,9 +40,12 @@ const Project_Showcase: React.FC = async () => {
         >
           <div className="flex flex-col flex-1 gap-8">
             <div className="flex flex-col gap-2">
-              <div>
+              <div className="flex items-center justify-between">
                 <div className="text-2xl font-semibold">
                   {project.project_name}
+                </div>
+                <div className="text-[16px]">
+                  {project.project_status}
                 </div>
               </div>
               <div className="text-sm  text-gray-800 dark:text-gray-300">

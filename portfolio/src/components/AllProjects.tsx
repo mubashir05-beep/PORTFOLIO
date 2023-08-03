@@ -10,14 +10,18 @@ interface Category {
 interface Projects {
   _id: string;
   thumbnail_image: {
-      asset: {
-          url: string | any;
-      };
+    asset: {
+      url: string | any;
+    };
   };
   project_name: string;
   category: string[];
   slug: string;
+  project_status:string,
+  project_industry:string,
   project_description: string;
+  project_caution:string;
+  project_date:string;
   project_stack: string[];
   live_link: string;
   repo_link: string;
