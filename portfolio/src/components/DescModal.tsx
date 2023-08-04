@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
-
+import { RxCross1 } from "react-icons/rx";
 interface Projects {
   _id: string;
   thumbnail_image: {
@@ -42,35 +42,37 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
   return (
     <>
       {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
-          <div className="dark:bg-[#323138] bg-black  rounded-lg shadow-lg max-w-md p-6 flex flex-col gap-[1.5rem]">
-            <div>
-              <h2 className="text-[2rem] text-white  font-[500]">{project.project_name}</h2>
-              <h2 className="text-[14px] text-gray-300">{project.project_status}</h2>
+      <div className="fixed inset-0 z-50 flex items-center justify-center ">
+
+        <div className="fixed inset-0 -z-10 bg-black opacity-60" onClick={handleModalToggle} />
+        <div className="dark:bg-[#323138] bg-white rounded-lg inset-0 max-[600px]:w-full max-[600px]:rounded-none max-[600px]:absolute overflow-auto shadow-lg min-[599px]:max-w-md p-6  flex  flex-col gap-[1rem]">
+            <div className='flex flex-col'>
+            <div className='flex  items-center justify-between'>
+              <h2 className="text-[2rem] dark:text-white  font-[500]">{project.project_name}</h2>
+              <RxCross1 size={24} className='cursor-pointer' onClick={handleModalToggle}/>
+            </div>
+              <h2 className="text-[14px] dark:text-gray-300">{project.project_status}</h2>
               {project.project_caution &&
-                <div className='text-red-500 pt-[12px] text-[13px]'>{project.project_caution}</div>
+                <div className='text-red-500 pt-[6px] text-xs'>{project.project_caution}</div>
               }
             </div>
-
-
-
+           
             <div className='flex flex-col gap-[1rem]'>
-              <p className="text-gray-300">{project.project_description}</p>
-              <div className='flex flex-col gap-2'>
-                <div className='text-white text-[1.5rem]'>Project Industry</div>
-                <div className='text-[14px] text-gray-300'>{project.project_industry}</div>
+              <p className="dark:text-gray-300 text-sm">{project.project_description}</p>
+              <div className='flex flex-col gapz'>
+                <div className='dark:text-white text-[1rem] font-[500]'>Project Industry</div>
+                <div className='text-sm dark:text-gray-300'>{project.project_industry}</div>
               </div>
               <div className='flex flex-col gap-2'>
-                <div className='text-white text-[1.5rem]'>Tech Stack:</div>
+                <div className='dark:text-white text-[1rem] font-[500]'>Tech Stack:</div>
                 <ul className="flex gap-1 flex-wrap">
                   {project.project_stack.map((tech, index) => (
-                    <li key={index} className={`bg-black dark:text-white text-gray-300 dark:bg-gray-800  px-2 py-1 rounded`}>{tech}</li>
+                    <li key={index} className={`bg-black dark:text-white text-gray-300 dark:bg-gray-800  px-2 text-sm py-1 rounded`}>{tech}</li>
                   ))}
                 </ul></div>
               <div className="flex justify-between items-center pt-4">
-                <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="dark:bg-white bg-black transition duration-300  dark:text-black text-white px-4 py-2 rounded-md dark:hover:bg-gray-400">Live Demo</a>
-                <a href={project.repo_link} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 rounded-md dark:hover:bg-gray-800">GitHub Repo</a>
+                <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="dark:bg-white transition duration-300 text-white bg-black dark:text-black px-4 py-2 rounded-md hover:bg-gray-400">Live Demo</a>
+                <a href={project.repo_link} target="_blank" rel="noopener noreferrer"  className="dark:bg-white transition duration-300 text-white bg-black dark:text-black px-4 py-2 rounded-md hover:bg-gray-400">GitHub Repo</a>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ const Project_Showcase: React.FC = async () => {
           <div className="flex flex-col justify-between flex-1 gap-8">
             <div>
             <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center max-[410px]:items-baseline max-[410px]:flex-col justify-between">
                 <div className="text-2xl font-semibold">
                   {project.project_name}
                 </div>
