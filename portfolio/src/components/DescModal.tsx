@@ -130,7 +130,7 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
           </div>
         </div>
       )}
-      <div className="dark:group-hover:bg-white w-[30px] h-[30px] absolute duration-300 transition -z-20 dark:bg-black" />
+    
       <BsArrowUpRightCircleFill
         size={55}
         className="dark:hover:text-[#323138] cursor-pointer hover:text-[#323138] duration-300 transition"

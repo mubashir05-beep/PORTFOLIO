@@ -28,7 +28,10 @@ interface projectsTypes {
 
 const Project_Showcase: React.FC = async () => {
   const projects: projectsTypes[] = await getProjects();
-  const truncateDescription = (description: string, numWords: number): string => {
+  const truncateDescription = (
+    description: string,
+    numWords: number
+  ): string => {
     const words = description.split(" ");
     const truncatedWords = words.slice(0, numWords);
     return truncatedWords.join(" ") + (words.length > numWords ? " ..." : "");
@@ -37,22 +40,25 @@ const Project_Showcase: React.FC = async () => {
     <div className="p-4 border border-black flex flex-col gap-[2rem] dark:border-white rounded-lg">
       {projects.map((project: projectsTypes) => (
         <div
-          className="flex items-center max-[1201px]:flex-col-reverse border-b py-[1rem] dark:border-white justify-between gap-8"
+          className="flex group items-center max-[1500px]:flex-col-reverse border-b py-[1rem] dark:border-white justify-between gap-8"
           key={project._id}
         >
           <div className="flex flex-col justify-between flex-1 gap-8">
             <div>
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center max-[410px]:items-baseline max-[410px]:flex-col justify-between">
-                  <div className="text-2xl font-semibold">
-                    {project.project_name}
-                  </div>
-                  <div className="text-[16px]">{project.project_status}</div>
+              <div className="flex items-center relative max-[410px]:items-baseline max-[410px]:flex-col justify-between">
+                <div className="text-2xl font-semibold mb-2">
+                  {" "}
+                  {/* Added margin-bottom */}
+                  {project.project_name}
                 </div>
-                <div className="text-sm  text-gray-800 max-w-[800px] dark:text-gray-300">
-                  {truncateDescription(project.project_description,30)}
-                </div>
+                <div className="text-[16px]">{project.project_status}</div>
+                <span className="block absolute bottom-0 left-0 w-full h-0.5 dark:bg-white bg-black transform-gpu origin-left group-hover:scale-x-100 scale-x-0 transition-all duration-300"></span>
               </div>
+
+              <div className="text-sm my-2 text-gray-800 max-w-[800px] dark:text-gray-300">
+                {truncateDescription(project.project_description, 30)}
+              </div>
+
               <div className="flex gap-2 flex-col">
                 <p className="text-base font-semibold">Tech Stack :</p>
                 <span className="flex gap-1  flex-wrap text-sm">
@@ -69,8 +75,10 @@ const Project_Showcase: React.FC = async () => {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex gap-4 items-center">
+
                 <a
-                  href={project.live_link}
+                 
+                 href={project.live_link}
                   target="_blank"
                   className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
@@ -95,7 +103,7 @@ const Project_Showcase: React.FC = async () => {
               width={800}
               quality={100}
               height={800}
-              className="object-contain h-full rounded-lg border dark:border-white min-[1201px]:max-w-[50%] max-w-[100%] w-full border-gray-600 flex-1"
+              className="object-contain h-full rounded-lg border dark:border-white  max-w-[100%] w-full border-gray-600 flex-1"
             />
           )}
         </div>
