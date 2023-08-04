@@ -90,7 +90,7 @@ const ProjectsData: React.FC<{ projectsData: Projects[], fetchedCategories: Cate
                   className="object-cover rounded-lg border dark:border-white border-gray-600 w-full h-[200px]"
                 />
               )}
-              <h2 className="text-xl font-semibold mt-4">{project.project_name}</h2>
+              <h2 className="text-xl pb-4 font-semibold mt-4">{project.project_name}</h2>
               <div className="text-sm  text-gray-800 dark:text-gray-300">{truncateDescription(project.project_description, 25)}</div>
               <p className="mt-2 flex gap-1">
                 {project.project_stack.map((stack) => (

@@ -32,13 +32,14 @@ const Project_Showcase: React.FC = async () => {
   const projects: projectsTypes[] = await getProjects();
 
   return (
-    <div className="p-4 border border-black dark:border-white rounded-lg">
+    <div className="p-4 border border-black flex flex-col gap-[2rem] dark:border-white rounded-lg">
       {projects.map((project: projectsTypes) => (
         <div
-          className="flex items-center flex-col-reverse justify-between gap-8"
+          className="flex  max-[1201px]:flex-col-reverse border-b py-[1rem] dark:border-white justify-between gap-8"
           key={project._id}
         >
-          <div className="flex flex-col flex-1 gap-8">
+          <div className="flex flex-col justify-between flex-1 gap-8">
+            <div>
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <div className="text-2xl font-semibold">
@@ -48,7 +49,7 @@ const Project_Showcase: React.FC = async () => {
                   {project.project_status}
                 </div>
               </div>
-              <div className="text-sm  text-gray-800 dark:text-gray-300">
+              <div className="text-sm  text-gray-800 max-w-[800px] dark:text-gray-300">
                 {project.project_description}
               </div>
             </div>
@@ -64,6 +65,7 @@ const Project_Showcase: React.FC = async () => {
                   </div>
                 ))}
               </span>
+            </div>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex gap-4 items-center">
@@ -87,13 +89,15 @@ const Project_Showcase: React.FC = async () => {
               
             </div>
           </div>
-          <Image
-            src={urlFor(project.thumbnail_image).url()}
-            alt={project.project_name}
-            width={700} // Set an appropriate width for your image
-            height={500} // Set an appropriate height for your image
-            className="object-fill rounded-lg border dark:border-white border-gray-600 w-full flex-1 "
-          />
+          {project.thumbnail_image&&
+      <Image
+      src={urlFor(project.thumbnail_image).url()}
+      alt={project.project_name}
+      width={800}
+      height={800}
+      className="object-cover rounded-lg border dark:border-white min-[1201px]:max-w-[50%] max-w-[100%] w-full border-gray-600 flex-1"
+    />}
+    
         </div>
       ))}
     </div>
