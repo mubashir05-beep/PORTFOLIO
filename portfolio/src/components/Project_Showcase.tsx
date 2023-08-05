@@ -37,10 +37,10 @@ const Project_Showcase: React.FC = async () => {
     return truncatedWords.join(" ") + (words.length > numWords ? " ..." : "");
   };
   return (
-    <div className="p-4 border border-black flex flex-col gap-[2rem] dark:border-white rounded-lg">
+    <div className="p-4 border border-black flex flex-col  dark:border-white rounded-lg">
       {projects.map((project: projectsTypes) => (
         <div
-          className="flex group items-center max-[1500px]:flex-col-reverse border-b py-[1rem] dark:border-white justify-between gap-8"
+          className="flex group items-center max-[1500px]:flex-col-reverse border-b border-black py-[1rem] dark:border-white justify-between gap-8"
           key={project._id}
         >
           <div className="flex flex-col justify-between flex-1 gap-8">
@@ -80,14 +80,14 @@ const Project_Showcase: React.FC = async () => {
                  
                  href={project.live_link}
                   target="_blank"
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                  className="text-black dark:text-white  font-[600] hover:underline"
                 >
                   Live
                 </a>
                 <a
                   href={project.repo_link}
                   target="_blank"
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                  className="text-black dark:text-white font-[600] hover:underline"
                 >
                   Repo
                 </a>

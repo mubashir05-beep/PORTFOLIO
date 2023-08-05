@@ -115,8 +115,8 @@ const Form: FC = () => {
           value={formData.name}
           name="name"
           onChange={handleChange}
-          className={`w-full px-4 py-2 rounded-md border bg-[#7a7a7a] text-black dark:text-white dark:border-gray-400 border-white focus:outline-none focus:border-white ${
-            formErrors.name && "dark:border-red-500 border-red-500"
+          className={`w-full px-4 py-2 rounded-md border  text-black dark:text-white dark:border-gray-400 border-white focus:outline-none focus:border-white ${
+            formErrors.name && "dark:border-red-500 border-red-800 border-[2px]"
           }`}
         />
       </div>
@@ -140,7 +140,7 @@ const Form: FC = () => {
           name="email"
           onChange={handleChange}
           className={`w-full px-4 py-2 rounded-md border text-black dark:text-white dark:border-gray-400 border-white focus:outline-none focus:border-white ${
-            formErrors.email && "dark:border-red-500 border-red-500"
+            formErrors.email && "dark:border-red-500  border-red-800 border-[2px]"
           }`}
         />
       </div>
@@ -165,7 +165,7 @@ const Form: FC = () => {
           name="message"
           onChange={handleChange}
           className={`w-full px-4 py-2 rounded-md border text-black dark:text-white dark:border-gray-400 border-white focus:outline-none focus:border-white ${
-            formErrors.message && "dark:border-red-500 border-red-500"
+            formErrors.message && "dark:border-red-500  border-red-800 border-[2px]"
           }`}
         />
       </div>

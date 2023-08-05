@@ -87,12 +87,13 @@ const ProjectsData: React.FC<{ projectsData: Projects[], fetchedCategories: Cate
                   alt={project.project_name}
                   width={700}
                   height={100}
-                  className="object-cover rounded-lg border dark:border-white border-gray-600 w-full h-[200px]"
+                  quality={100}
+                  className="object-contain rounded-lg border dark:border-white border-gray-600 w-full "
                 />
               )}
               <h2 className="text-xl pb-4 font-semibold mt-4">{project.project_name}</h2>
               <div className="text-sm  text-gray-800 dark:text-gray-300">{truncateDescription(project.project_description, 25)}</div>
-              <p className="mt-2 flex gap-1">
+              <p className="mt-2 flex-wrap flex gap-1">
                 {project.project_stack.map((stack) => (
                   <span className={`bg-black text-white dark:bg-gray-800  px-2 py-1 rounded`} key={stack}>
                     {stack}
@@ -105,15 +106,15 @@ const ProjectsData: React.FC<{ projectsData: Projects[], fetchedCategories: Cate
                   <a
                     href={project.live_link}
                     target="_blank"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                  >
+                    className="text-black dark:text-white  font-[600] hover:underline"
+                    >
                     Live
                   </a>
                   <a
                     href={project.repo_link}
                     target="_blank"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                  >
+                    className="text-black dark:text-white  font-[600] hover:underline"
+                    >
                     Repo
                   </a>
                 </div>

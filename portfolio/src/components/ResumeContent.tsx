@@ -5,9 +5,13 @@ const ResumeContent: FC = () => {
     <div className="flex flex-[0.75] gap-8   justify-between flex-col">
       <div className="flex flex-col gap-6  group ">
       <div className="flex flex-col gap-[0.5rem]">
+       <div className="flex justify-between items-center">
         <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
           Experience
         </h1>
+        <a href='Mubashir_Resume.pdf'  className="text-black dark:text-white  font-[600] hover:underline"
+                     target="_blank">Download Resume</a>
+        </div>
         <div className="text-[15px]">
        Having 1 year of Front-End Development experience with React, Next.js, TypeScript, Sanity, and Tailwind CSS.
           </div>

@@ -17,7 +17,10 @@ const PageHeader: FC = () => {
             <p className="text-[14px] text-gray-300">Front-End Engineer</p>
           </div>
           <p className="text-gray-300 max-[480px]:text-[14px] break-words">
-            contact.muhammadmubashir@gmail.com
+           
+            <a href={`mailto:${' contact.muhammadmubashir@gmail.com'}`} className=" hover:underline">
+          {" " +  'contact.muhammadmubashir@gmail.com'}
+        </a>
           </p>
           <p className="flex items-center gap-1 max-[480px]:text-[14px] text-gray-300">
             <svg
@@ -50,13 +53,11 @@ const PageHeader: FC = () => {
             <BiMessageAlt /> Contact
           </Link>
          
-          <a
-            href="https://publuu.com/flip-book/195325/474153"
-            target="_blank"
-            className="flex  w-full justify-center items-center cursor-pointer gap-4 px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300  hover:shadow-2xl "
-          >
-            <MdOutlineContactPage size={18} /> Resume
-          </a>
+          <Link href={'/resume'} className="flex items-center cursor-pointer gap-4 px-4 py-2 border  w-full justify-center border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  ">
+          <MdOutlineContactPage size={18} /> Resume
+          </Link>
+           
+         
         </div>
       </div>
     </>
