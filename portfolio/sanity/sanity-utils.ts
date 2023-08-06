@@ -1,4 +1,4 @@
-
+'use client'
 import { client } from '../sanity/config/client-config';
 import { createClient, groq } from "next-sanity";
 export const getProjects = async () => {
