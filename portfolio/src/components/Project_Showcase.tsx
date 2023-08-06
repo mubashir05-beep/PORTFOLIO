@@ -2,9 +2,6 @@ import React from "react";
 import { getProjects } from "../../sanity/sanity-utils";
 import Image from "next/image";
 import { urlFor } from "../../sanity/config/client-config";
-
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
-import Link from "next/link";
 import DescModal from "./DescModal";
 interface projectsTypes {
   _id: string;
