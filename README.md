@@ -4,7 +4,7 @@ Explore my comprehensive personal portfolio, constructed with Next.js, TypeScrip
 
 # Live URL: https://www.mubash1r.me/
 
-# Technologies & Techniques Used :
+# Tech Stack:
 
     1)NEXT-JS.
     2)TypeScript.
