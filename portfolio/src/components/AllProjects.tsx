@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from 'react';
 import React from 'react';
 import { categories, allProjects } from '../../sanity/sanity-utils';
