@@ -78,7 +78,7 @@ const DescModal: React.FC<{ project: Projects }> = ({ project }) => {
                 width={800}
                 quality={100}
                 height={800}
-                className="object-contain rounded-lg border dark:border-white  w-full border-gray-600 flex-1"
+                className="object-contain rounded-lg border dark:border-white  w-full border-gray-600 "
               />
             )}
             <div className="flex flex-col gap-[1rem]">
