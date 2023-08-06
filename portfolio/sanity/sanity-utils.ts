@@ -20,4 +20,4 @@ export const categories=async()=>{
   return projects ;
 }
 
-// export const revalidate = 60; 
+export const revalidate = 60; 
