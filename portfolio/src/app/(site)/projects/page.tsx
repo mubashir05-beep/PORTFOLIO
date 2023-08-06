@@ -1,7 +1,5 @@
 import Page_Header from "@/components/Page_Header";
 import React from "react";
-
-
 import Project_Showcase from "@/components/Project_Showcase";
 import AllProjects from "@/components/AllProjects";
 

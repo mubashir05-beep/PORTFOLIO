@@ -5,7 +5,7 @@ const ResumeContent: FC = () => {
     <div className="flex flex-[0.75] gap-8   justify-between flex-col">
       <div className="flex flex-col gap-6  group ">
       <div className="flex flex-col gap-[0.5rem]">
-       <div className="flex justify-between items-center">
+       <div className="flex justify-between max-[600px]:flex-col min-[600px]:items-center">
         <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
           Experience
         </h1>
