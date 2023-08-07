@@ -1,7 +1,7 @@
-import React from "react";
-import { categories, allProjects } from "../../sanity/sanity-utils";
+import React from 'react';
+import { categories, allProjects } from '../../sanity/sanity-utils';
 
-import ProjectsData from "./ProjectsData";
+import ProjectsData from './ProjectsData';
 
 interface Category {
   tech_stack: string[];
@@ -27,9 +27,10 @@ interface Projects {
 }
 
 const AllProjects: React.FC = async () => {
-  const fetchedCategories: Category[] = await categories();
-  const projectsData: Projects[] = await allProjects();
 
+      const projectsData: Projects[] = await allProjects();
+      const fetchedCategories: Category[] = await categories();
+  
   return (
     <>
       <ProjectsData
@@ -41,3 +42,4 @@ const AllProjects: React.FC = async () => {
 };
 
 export default AllProjects;
+export const revalidate = 60;
