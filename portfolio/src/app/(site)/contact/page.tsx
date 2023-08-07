@@ -1,13 +1,11 @@
 import React from "react";
 import Form from "@/components/Form";
 import Contact_Header from "@/components/Contact_Header";
-
 import Link from "next/link";
 import '../../globals.css'
 const Page: React.FC = () => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center gap-[2rem]">
-      {/* Container for Home link */}
       <div className="absolute top-[16px] left-[33px] 
       ">
         <Link
