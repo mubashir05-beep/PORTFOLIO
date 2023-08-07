@@ -25,7 +25,7 @@ const Contact_Header: React.FC<ContactHeaderProps> = ({ email }) => {
             {email}
           </a>
         </p>
-        <div className="flex items-center flex-wrap justify-center gap-4 pt-8">
+        <div className="flex  max-[800px]:items-center flex-wrap max-[800px]:justify-center gap-4 pt-8">
         <Link href={'/'}   className="flex  justify-center items-center gap-4 cursor-pointer px-4 py-2 border border-black text-black  dark:border-white dark:text-white  rounded-lg on dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  "
           >
             <AiOutlineHome /> Home
