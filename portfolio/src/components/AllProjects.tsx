@@ -1,9 +1,7 @@
-'use client'
-import { useEffect, useState } from 'react';
-import React from 'react';
-import { categories, allProjects } from '../../sanity/sanity-utils';
+import React from "react";
+import { categories, allProjects } from "../../sanity/sanity-utils";
 
-import ProjectsData from './ProjectsData';
+import ProjectsData from "./ProjectsData";
 
 interface Category {
   tech_stack: string[];
@@ -28,20 +26,9 @@ interface Projects {
   repo_link: string;
 }
 
-const AllProjects: React.FC = () => {
-  const [fetchedCategories, setFetchedCategories] = useState<Category[]>([]);
-  const [projectsData, setProjectsData] = useState<Projects[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const fetchedCategoriesData: Category[] = await categories();
-      const fetchedProjectsData: Projects[] = await allProjects();
-      setFetchedCategories(fetchedCategoriesData);
-      setProjectsData(fetchedProjectsData);
-    };
-
-    fetchData();
-  }, []);
+const AllProjects: React.FC = async () => {
+  const fetchedCategories: Category[] = await categories();
+  const projectsData: Projects[] = await allProjects();
 
   return (
     <>
