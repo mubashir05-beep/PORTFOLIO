@@ -1,5 +1,5 @@
 # Portfolio
-(test)
+
 Explore my comprehensive personal portfolio, constructed with Next.js, TypeScript, and Tailwind. Discover seamless interactivity and an impeccable, responsive, and elegant UI that includes built-in dark mode and light mode toggles. Stay connected through Nodemailer integration while delving into a diverse range of projects showcasing my expertise.
 
 # Live URL: https://www.mubash1r.me/
