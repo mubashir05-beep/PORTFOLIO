@@ -4,25 +4,33 @@ const ResumeContent: FC = () => {
   return (
     <div className="flex flex-[0.75] gap-8   justify-between flex-col">
       <div className="flex flex-col gap-6  group ">
-      <div className="flex flex-col gap-[0.5rem]">
-       <div className="flex justify-between max-[600px]:flex-col max-[600px]:gap-4 min-[600px]:items-center">
-        <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
-          Experience
-        </h1>
-        <a href='Mubashir_Resume.pdf'  className="text-black dark:text-white  font-[600] hover:underline"
-                     target="_blank">Download Resume</a>
-        </div>
-        <div className="text-[15px]">
-       Having 1 year of Front-End Development experience with React, Next.js, TypeScript, Sanity, and Tailwind CSS.
+        <div className="flex flex-col gap-[0.5rem] max-[755px]:gap-4">
+          <div className="flex justify-between max-[755px]:flex-col max-[755px]:gap-4 min-[755px]:items-center">
+            <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
+              Experience
+            </h1>
+            <a
+              href="Mubashir_Resume.pdf"
+              className="flex  justify-center items-center gap-4 max-w-[200px] cursor-pointer px-4 py-2 border border-black text-black  dark:border-white dark:text-white  rounded-lg  dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  "
+              target="_blank"
+            >
+              Download Resume
+            </a>
+          </div>
+          <div className="text-[15px]">
+            Having 1 year of Front-End Development experience with React,
+            Next.js, TypeScript, Sanity, and Tailwind CSS.
           </div>
         </div>
         <h1 className="text-3xl font-light relative group transition flex items-center justify-between duration-300">
           <div className="flex items-center max-[455px]:flex-col max-[455px]:items-start  w-full pb-2 justify-between">
             <div className="flex flex-col ">
-            <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">FreeLancing</div>
-            <div className=" text-[14px] font-[400] max-[455px]:[13px] dark:text-gray-300">
-              Front-End Developer
-            </div>
+              <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">
+                FreeLancing
+              </div>
+              <div className=" text-[14px] font-[400] max-[455px]:[13px] dark:text-gray-300">
+                Front-End Developer
+              </div>
             </div>
             <div className=" text-[18px] font-[400] max-[550px]:text-[14px]  max-[455px]:[13px] dark:text-gray-300">
               SEPT 2022-Present
@@ -30,7 +38,10 @@ const ResumeContent: FC = () => {
           </div>
           <span className="block absolute bottom-0 left-0 w-full h-0.5 dark:bg-white bg-black transform-gpu origin-left group-hover:scale-x-100 scale-x-0 transition-all duration-300"></span>
         </h1>
-        <p className="text-[18px] font-[400]">Currently working as a Front-End Developer and previously served as a Content Manager for various Daraz online shops!</p>
+        <p className="text-[18px] font-[400]">
+          Currently working as a Front-End Developer and previously served as a
+          Content Manager for various Daraz online shops!
+        </p>
 
         <ul className="list-disc text-[14px] dark:text-gray-300 list-inside space-y-2">
           <li>
@@ -43,9 +54,9 @@ const ResumeContent: FC = () => {
             responsive and user-friendly websites, enhancing user experiences.
           </li>
           <li>
-            Utilized programming languages such as HTML, CSS, JavaScript, TypeScript, and
-            frameworks like React, Tailwind Css, and Next to build interactive and dynamic web
-            applications.
+            Utilized programming languages such as HTML, CSS, JavaScript,
+            TypeScript, and frameworks like React, Tailwind Css, and Next to
+            build interactive and dynamic web applications.
           </li>
           <li>
             Engaged in continuous learning to stay updated with the latest web
@@ -83,20 +94,21 @@ const ResumeContent: FC = () => {
         </ul>
       </div>
 
-      <div className="w-[50vw] mx-auto flex items-center text-center justify-center h-0.5 bg-black dark:bg-white"/>
+      <div className="w-[50vw] mx-auto flex items-center text-center justify-center h-0.5 bg-black dark:bg-white" />
 
-        
       <div className="flex flex-col group justify-between gap-6">
-      <h1 className="font-[500]  text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
+        <h1 className="font-[500]  text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
           Education
         </h1>
         <h1 className="text-3xl font-light relative  transition flex items-center justify-between duration-300">
           <div className="flex items-center w-full pb-2 max-[835px]:flex-col max-[835px]:items-start justify-between">
             <div className="flex flex-col ">
-            <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">PMAS-Arid Agriculture University (BIMS)</div>
-            <div className=" text-[14px] font-[400]  dark:text-gray-300">
-            Bachelor of Science in Software Engineering (BSSE)
-            </div>
+              <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">
+                PMAS-Arid Agriculture University (BIMS)
+              </div>
+              <div className=" text-[14px] font-[400]  dark:text-gray-300">
+                Bachelor of Science in Software Engineering (BSSE)
+              </div>
             </div>
             <div className=" text-[18px] font-[400] max-[550px]:text-[14px] dark:text-gray-300">
               FALL 2021-Present
