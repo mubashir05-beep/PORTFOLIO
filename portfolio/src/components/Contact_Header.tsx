@@ -38,12 +38,14 @@ const Contact_Header: React.FC<ContactHeaderProps> = ({ email }) => {
             <FiGithub /> GitHub
           </a>
 
-          <Link
-            href={"/resume"}
+          <a
+            href="Mubashir_Resume.pdf"
             className="flex  justify-center items-center gap-4 cursor-pointer px-4 py-2 border border-black text-black  dark:border-white dark:text-white  rounded-lg on dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  "
+            
+            target="_blank"
           >
-            <MdOutlineContactPage size={18} /> Resume
-          </Link>
+            <MdOutlineContactPage size={18} /> Get Resume
+          </a>
         </div>
       </div>
     </>

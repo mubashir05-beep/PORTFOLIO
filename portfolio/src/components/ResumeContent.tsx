@@ -9,13 +9,7 @@ const ResumeContent: FC = () => {
             <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
               Experience
             </h1>
-            <a
-              href="Mubashir_Resume.pdf"
-              className="flex  justify-center items-center gap-4 max-w-[200px] cursor-pointer px-4 py-2 border border-black text-black  dark:border-white dark:text-white  rounded-lg  dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl  "
-              target="_blank"
-            >
-              Download Resume
-            </a>
+            
           </div>
           <div className="text-[15px]">
             Having 1 year of Front-End Development experience with React,
