@@ -2,8 +2,9 @@ import Page_Header from "@/components/Page_Header";
 import React from "react";
 import Project_Showcase from "@/components/Project_Showcase";
 import AllProjects from "@/components/AllProjects";
+import { allProjects, categories } from "../../../../sanity/sanity-utils";
 
-const page: React.FC = () => {
+const page = () => {
   return (
     <div className="flex justify-between gap-[2rem] max-[1200px]:flex-col h-full w-full">
         <div className="min-[1200px]:sticky top-6 flex min-[1200px]:h-[600px] min-[1200px]:py-2">
@@ -30,7 +31,7 @@ const page: React.FC = () => {
         <div className="text-[30px] underline  underline-offset-4 max-[550px]:text-[25px]">
           All Projects
         </div>
-        <AllProjects/>
+        <AllProjects  />
         </div>
       </div>
     </div>
@@ -38,3 +39,6 @@ const page: React.FC = () => {
 };
 
 export default page;
+
+
+

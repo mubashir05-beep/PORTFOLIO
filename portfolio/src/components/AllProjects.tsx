@@ -1,16 +1,16 @@
 import React from 'react';
-import { categories, allProjects } from '../../sanity/sanity-utils';
-
 import ProjectsData from './ProjectsData';
+import { client } from '../../sanity/config/client-config';
 
 interface Category {
   tech_stack: string[];
 }
-interface Projects {
+
+interface Project {
   _id: string;
   thumbnail_image: {
     asset: {
-      url: string | any;
+      url: string;
     };
   };
   project_name: string;
@@ -26,20 +26,34 @@ interface Projects {
   repo_link: string;
 }
 
-const AllProjects: React.FC = async () => {
+interface AllProjectsProps {
+  projectsData: Project[];
+  fetchedCategories: Category[];
+}
+ const allProjects=async()=>{
+ 
+  const query = '*[_type=="all_projects"]';
+  const projects = await client.fetch(query,{next: {revalidate: 60}});
+  return projects ;
+}
 
-      const projectsData: Projects[] = await allProjects();
-      const fetchedCategories: Category[] = await categories();
-  
+ const categories=async()=>{
+
+  const query = '*[_type=="techStack"]';
+  const categories = await client.fetch(query,{next: {revalidate: 60}});
+  return categories ;
+}
+
+const AllProjects =async () => {
+const fetchedCategories:Category[]=await categories();
+const projectsData:Project[]=await allProjects();
   return (
-    <>
-      <ProjectsData
-        projectsData={projectsData}
-        fetchedCategories={fetchedCategories}
-      />
-    </>
+    <div>
+      <ProjectsData projectsData={projectsData} fetchedCategories={fetchedCategories} />
+    </div>
   );
 };
 
 export default AllProjects;
-export const revalidate = 60;
+
+export const revalidate = 60; 
