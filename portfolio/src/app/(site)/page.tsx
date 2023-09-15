@@ -21,7 +21,7 @@ export default function Home({}) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-end ">
+      <div className="flex flex-col transition duration-300 ease-in-out items-center justify-end ">
         <div className="flex flex-col gap-[30px] justify-between h-auto">
           <div className="  flex flex-col items-baseline  justify-end">
             <h1 className="text-[80px] pt-[5vh] max-[1070px]:text-[60px] max-[600px]:text-[50px] break-words font-[500] ">

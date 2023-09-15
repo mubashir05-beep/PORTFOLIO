@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiMessageAlt } from "react-icons/bi";
-
+import {AiFillProject} from 'react-icons/ai'
 import { MdOutlineContactPage } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import Link from "next/link";
@@ -47,13 +47,12 @@ const PageHeader: FC = () => {
           >
             <AiOutlineHome /> Home
           </Link>
-          <a
-            href="https://github.com/mubashir05-beep"
-            target="_blank"
+          <Link
+            href={"/projects"}
             className="flex w-full justify-center items-center gap-4 cursor-pointer px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl"
           >
-            <FiGithub /> GitHub
-          </a>
+            <AiFillProject /> Projects
+          </Link>
           <Link
             href={"/contact"}
             className="flex items-center cursor-pointer gap-4 px-4 py-2 border  w-full justify-center border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138] dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl"
@@ -62,7 +61,7 @@ const PageHeader: FC = () => {
           </Link>
 
           <a
-            href="Mubashir_Resume.pdf"
+            href="Mubashir-Resume .pdf"
             className="flex w-full justify-center items-center gap-4  cursor-pointer px-4 py-2 border border-white text-white  rounded-lg on dark:hover:bg-white hover:bg-[#323138]  dark:hover:text-black dark:hover:border-white transition duration-300 hover:shadow-2xl"
             target="_blank"
           >

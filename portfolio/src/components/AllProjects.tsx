@@ -30,23 +30,24 @@ interface AllProjectsProps {
   projectsData: Project[];
   fetchedCategories: Category[];
 }
- const allProjects=async()=>{
- 
+const allProjects = async () => {
+
   const query = '*[_type=="all_projects"]';
-  const projects = await client.fetch(query,{next: {revalidate: 60}});
-  return projects ;
+  const projects = await client.fetch(query, { next: { revalidate: 60 } });
+  return projects;
 }
 
- const categories=async()=>{
+const categories = async () => {
 
   const query = '*[_type=="techStack"]';
-  const categories = await client.fetch(query,{next: {revalidate: 60}});
-  return categories ;
+  const categories = await client.fetch(query, { next: { revalidate: 60 } });
+  return categories;
 }
 
-const AllProjects =async () => {
-const fetchedCategories:Category[]=await categories();
-const projectsData:Project[]=await allProjects();
+const AllProjects = async () => {
+  const [fetchedCategories, projectsData] = await Promise.all([categories(), allProjects()])
+
+
   return (
     <div>
       <ProjectsData projectsData={projectsData} fetchedCategories={fetchedCategories} />

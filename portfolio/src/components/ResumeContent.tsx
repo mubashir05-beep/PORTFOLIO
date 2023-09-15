@@ -9,85 +9,105 @@ const ResumeContent: FC = () => {
             <h1 className="font-[500] text-[60px] underline underline-offset-4 max-[550px]:text-[40px]">
               Experience
             </h1>
-            
+
           </div>
           <div className="text-[15px]">
-            Having 1 year of Front-End Development experience with React,
-            Next.js, TypeScript, Sanity, and Tailwind CSS.
+            Having years of Front-End Development experience with React,
+            Next.js, Node.js, TypeScript, and Tailwind CSS.
           </div>
         </div>
         <h1 className="text-3xl font-light relative group transition flex items-center justify-between duration-300">
           <div className="flex items-center max-[455px]:flex-col max-[455px]:items-start  w-full pb-2 justify-between">
             <div className="flex flex-col ">
               <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">
-                FreeLancing
+                Frontend - Software Engineer
               </div>
               <div className=" text-[14px] font-[400] max-[455px]:[13px] dark:text-gray-300">
-                Front-End Developer
+                <b>VirtuoByte</b> - Islamabad/Pakistan
               </div>
             </div>
-            <div className=" text-[18px] font-[400] max-[550px]:text-[14px]  max-[455px]:[13px] dark:text-gray-300">
-              SEPT 2022-Present
+            <div className=" text-[16px] font-[400] max-[550px]:text-[14px]  max-[455px]:[13px] dark:text-gray-300">
+              Aug-2022 - Present
             </div>
           </div>
           <span className="block absolute bottom-0 left-0 w-full h-0.5 dark:bg-white bg-black transform-gpu origin-left group-hover:scale-x-100 scale-x-0 transition-all duration-300"></span>
         </h1>
         <p className="text-[18px] font-[400]">
-          Currently working as a Front-End Developer and previously served as a
-          Content Manager for various Daraz online shops!
+          In Virtuobyte, I handle a diverse range of front-end tasks, bringing creative and functional web solutions to life.
         </p>
 
         <ul className="list-disc text-[14px] dark:text-gray-300 list-inside space-y-2">
           <li>
-            Worked as a web developer on various projects, both voluntarily and
-            paid, gaining valuable experience in front-end and back-end
-            development.
+            Led the front-end development efforts and played a pivotal role in designing and
+            implementing captivating user interfaces, enhancing overall user satisfaction and
+            engagement.
           </li>
           <li>
-            Collaborated with clients and teams to design and implement
-            responsive and user-friendly websites, enhancing user experiences.
+            Consistently met project deadlines and exceeded client expectations by delivering
+            high-quality, bug-free code on schedule.
           </li>
           <li>
-            Utilized programming languages such as HTML, CSS, JavaScript,
-            TypeScript, and frameworks like React, Tailwind Css, and Next to
-            build interactive and dynamic web applications.
+            Collaborated closely with the backend development team to seamlessly integrate
+            APIs and ensure efficient data flow, enhancing the overall functionality of
+            applications
           </li>
           <li>
-            Engaged in continuous learning to stay updated with the latest web
-            development trends and technologies.
+            Proactively identified and resolved complex technical issues, maintaining the
+            stability and reliability of critical applications.
           </li>
           <li>
-            As a content manager for a Daraz online store, curated and managed
-            product listings, ensuring accurate and engaging content.
+            Actively participated in code review sessions, driving adherence to coding
+            standards and ensuring codebase quality across the organization.
           </li>
           <li>
-            Optimized product descriptions and images for better search
-            visibility and increased sales.
-          </li>
-          <li>
-            Coordinated with marketing teams to create compelling content for
-            promotional campaigns.
-          </li>
-          <li>
-            Demonstrated excellent organizational skills, balancing multiple
-            projects, deadlines, and tasks effectively.
-          </li>
-          <li>
-            Navigated communication with clients, colleagues, and stakeholders
-            to ensure smooth project workflows and client satisfaction.
-          </li>
-          <li>
-            Maintained a strong work ethic, consistently delivering high-quality
-            work and meeting project milestones.
-          </li>
-          <li>
-            Adapted to the dynamic nature of freelance work, managing time
-            efficiently and remaining adaptable to changing project
-            requirements.
+            Maintained application stability by proactively identifying and resolving complex technical issues, ensuring uninterrupted operation.
           </li>
         </ul>
       </div>
 
+      <div className="w-[30vw] mx-auto flex items-center text-center justify-center h-0.5 bg-black dark:bg-white" />
+
+      <h1 className="text-3xl font-light relative group transition flex items-center justify-between duration-300">
+        <div className="flex items-center max-[455px]:flex-col max-[455px]:items-start  w-full pb-2 justify-between">
+          <div className="flex flex-col ">
+            <div className=" text-[25px] font-[500] max-[550px]:text-[20px]">
+              Freelance - Full-Stack Developer
+            </div>
+            <div className=" text-[14px] font-[400] max-[455px]:[13px] dark:text-gray-300">
+              <b>Self-Employed</b> - Islamabad/Pakistan
+            </div>
+          </div>
+          <div className=" text-[16px] font-[400] max-[550px]:text-[14px]  max-[455px]:[13px] dark:text-gray-300">
+            Jul-2021 - Aug-2022
+          </div>
+        </div>
+        <span className="block absolute bottom-0 left-0 w-full h-0.5 dark:bg-white bg-black transform-gpu origin-left group-hover:scale-x-100 scale-x-0 transition-all duration-300"></span>
+      </h1>
+      <p className="text-[18px] font-[400]">
+        During my voluntary work as a Full-Stack Developer, I dedicated my skills to create impactful digital solutions that made a difference.
+      </p>
+
+      <ul className="list-disc text-[14px] dark:text-gray-300 list-inside space-y-2">
+        <li>
+          Developed and maintained custom websites and web applications for a diverse
+          clientele, consistently meeting project deadlines and exceeding client
+          expectations.
+        </li>
+        <li>
+          Mentored and advised small business owners on best practices for online
+          marketing, SEO optimization, and content management, empowering them to take
+          control of their digital presence.
+        </li>
+        <li>
+          Collaborated with local community organizations on volunteer web development
+          projects, contributing to the growth and success of various grassroots initiatives.
+        </li>
+        <li>
+          Utilized a wide range of technologies, including MERN Stack, to create bespoke
+          solutions tailored to each client's unique needs and goals.
+        </li>
+
+      </ul>
       <div className="w-[50vw] mx-auto flex items-center text-center justify-center h-0.5 bg-black dark:bg-white" />
 
       <div className="flex flex-col group justify-between gap-6">
